@@ -1,0 +1,13 @@
+Package: mox
+Name: MOX
+Version: 3.7
+Architecture: iphoneos-arm64
+Description: MOX Tweak for iOS
+Maintainer: MOX Dev
+Author: MOX Dev
+Section: Tweaks
+Filename: debs/mox_3.7_iphoneos-arm64.deb
+Size: 1720632
+MD5sum: dummy-md5
+SHA1: dummy-sha1
+SHA256: dummy-sha256
