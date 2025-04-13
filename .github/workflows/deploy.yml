@@ -16,23 +16,25 @@ jobs:
       - name: Install dpkg-scanpackages
         run: sudo apt-get update && sudo apt-get install -y dpkg-dev
 
-      - name: Generate Packages and Release at root
+      - name: Generate Packages and Release
         run: |
-          dpkg-scanpackages debs /dev/null > Packages
+          dpkg-scanpackages ./debs /dev/null > Packages
+          
+          cat <<EOF > Release
+Origin: MoxMoxIOS
+Label: MoxMoxIOS Repo
+Suite: stable
+Version: 1.0
+Codename: moxios
+Architectures: iphoneos-arm iphoneos-arm64
+Components: main
+Description: MoxMox iOS Tweak Repo
+EOF
 
-          echo "Origin: MoxMoxIOS" > Release
-          echo "Label: MoxMoxIOS Repo" >> Release
-          echo "Suite: stable" >> Release
-          echo "Version: 1.0" >> Release
-          echo "Codename: moxios" >> Release
-          echo "Architectures: iphoneos-arm" >> Release
-          echo "Components: main" >> Release
-          echo "Description: MoxMox iOS Tweak Repo" >> Release
-
-      - name: Commit and push
+      - name: Commit and Push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add Packages Release
-          git commit -m "Auto update Packages & Release" || echo "No changes to commit"
+          git commit -m "Auto update Packages and Release" || echo "No changes"
           git push
