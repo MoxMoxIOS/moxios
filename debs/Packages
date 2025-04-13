@@ -1,0 +1,16 @@
+Package: mox
+Version: 3.7
+Architecture: iphoneos-arm
+Maintainer: MOX
+Installed-Size: 70352
+Depends: mobilesubstrate, preferenceloader
+Filename: ./MOX SDK FREE ROOTFULL.deb
+Size: 1613912
+MD5sum: 4bf892c4f7638dc30249f872bb23437d
+SHA1: 329292717ac48b0463f43bbeba2a730ac7d733e3
+SHA256: 2a28f9ed4155ac793d27346423225482252478951b68a8075c8c5c41066b0fc4
+Section: Tweaks
+Description: MOX
+Author: MOX
+Name: MOX
+
