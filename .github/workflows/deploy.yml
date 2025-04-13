@@ -1,28 +1,28 @@
-name: Deploy Sileo Repo
+name: Auto Build Sileo Repo
 
 on:
   push:
     paths:
-      - 'debs/**.deb'
+      - 'debs/*.deb'
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-    - name: Generate Packages file
-      run: |
-        mkdir -p repo
-        dpkg-scanpackages ./debs /dev/null > repo/Packages
-        gzip -c repo/Packages > repo/Packages.gz
+      - name: Generate Packages files
+        run: |
+          mkdir -p repo
+          dpkg-scanpackages ./debs /dev/null > repo/Packages
+          gzip -c repo/Packages > repo/Packages.gz
 
-    - name: Commit and push changes
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "github-actions[bot]@users.noreply.github.com"
-        git add repo/Packages repo/Packages.gz
-        git commit -m "Update Packages"
-        git push
+      - name: Commit and push Packages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repo/Packages repo/Packages.gz
+          git commit -m "Update Packages"
+          git push
