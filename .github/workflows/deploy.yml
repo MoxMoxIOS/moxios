@@ -1,4 +1,4 @@
-name: Build Sileo Repo
+name: Build Packages
 
 on:
   push:
@@ -13,18 +13,26 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Install dpkg-dev
+      - name: Install dpkg-scanpackages
         run: sudo apt-get update && sudo apt-get install -y dpkg-dev
 
-      - name: Generate Packages file from all debs
+      - name: Generate Packages and Release at root
         run: |
           dpkg-scanpackages debs /dev/null > Packages
-          gzip -k -f Packages
 
-      - name: Commit and push Packages
+          echo "Origin: MoxMoxIOS" > Release
+          echo "Label: MoxMoxIOS Repo" >> Release
+          echo "Suite: stable" >> Release
+          echo "Version: 1.0" >> Release
+          echo "Codename: moxios" >> Release
+          echo "Architectures: iphoneos-arm" >> Release
+          echo "Components: main" >> Release
+          echo "Description: MoxMox iOS Tweak Repo" >> Release
+
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add Packages Packages.gz
-          git commit -m "Auto update Packages" || echo "No changes to commit"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add Packages Release
+          git commit -m "Auto update Packages & Release" || echo "No changes to commit"
           git push
