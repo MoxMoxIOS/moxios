@@ -20,20 +20,6 @@ Description: MOX Tweak for iOS
 Maintainer: MOX Dev
 Author: MOX Dev
 Section: Tweaks
-Filename: debs/MOX_UE4_FREE_ROOTLESS.deb
-Size: 188548
-MD5sum: 26d267c3b9825f7eaad67018a63cc598
-SHA1: 7bb5e26bf58362ca8405bb2e5a8ce24d77aeebdc
-SHA256: df8402ee5690b3a0f1e3eec10975ce30eb9b36b52451a16861b8e4b20682bfb7
-
-Package: mox
-Name: MOX
-Version: 3.7
-Architecture: iphoneos-arm64
-Description: MOX Tweak for iOS
-Maintainer: MOX Dev
-Author: MOX Dev
-Section: Tweaks
 Filename: debs/MOX_SDK_FREE_ROOTLESS.deb
 Size: 1613294
 MD5sum: df003ec5a6d9e278353877f3923b233c
@@ -53,3 +39,18 @@ Size: 188672
 MD5sum: bc2e4ecf5713aa8cdfec2a82e20db888
 SHA1: c9f662f6bb22bafe3c7077ef4c098203335715f9
 SHA256: b079a5fb75c5e7e6df232fcea07b3a0ccd36312e2c658e7c2de7bb09b3db6834
+
+Package: mox
+Name: MOX
+Version: 3.7
+Architecture: iphoneos-arm64
+Description: MOX Tweak for iOS
+Maintainer: MOX Dev
+Author: MOX Dev
+Section: Tweaks
+Filename: debs/MOX_UE4_FREE_ROOTLESS.deb
+Size: 188548
+MD5sum: 26d267c3b9825f7eaad67018a63cc598
+SHA1: 7bb5e26bf58362ca8405bb2e5a8ce24d77aeebdc
+SHA256: df8402ee5690b3a0f1e3eec10975ce30eb9b36b52451a16861b8e4b20682bfb7
+
