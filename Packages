@@ -1,4 +1,4 @@
-Package: mox.sdk.rootfull
+Package: mox
 Name: MOX SDK FREE ROOTFULL
 Version: 3.7
 Architecture: iphoneos-arm
@@ -8,7 +8,7 @@ Size: 1613912
 Maintainer: MoxMox
 Section: Tweaks
 
-Package: mox.sdk.rootless
+Package: mox
 Name: MOX SDK FREE ROOTLESS
 Version: 3.7
 Architecture: iphoneos-arm64
@@ -18,7 +18,7 @@ Size: 1613294
 Maintainer: MoxMox
 Section: Tweaks
 
-Package: mox.ue4.rootfull
+Package: mox
 Name: MOX UE4 FREE ROOTFULL
 Version: 3.7
 Architecture: iphoneos-arm
@@ -28,7 +28,7 @@ Size: 188672
 Maintainer: MoxMox
 Section: Tweaks
 
-Package: mox.ue4.rootless
+Package: mox
 Name: MOX UE4 FREE ROOTLESS
 Version: 3.7
 Architecture: iphoneos-arm64
