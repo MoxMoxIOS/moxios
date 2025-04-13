@@ -1,8 +1,0 @@
-Origin: MoxMoxIOS
-Label: MoxMoxIOS Repo
-Suite: stable
-Version: 1.0
-Codename: moxios
-Architectures: iphoneos-arm
-Components: main
-Description: MoxMox iOS Tweak Repo
