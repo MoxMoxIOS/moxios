@@ -21,6 +21,7 @@ jobs:
           # 进入 debs 文件夹并生成 Packages 文件
           cd debs
           dpkg-scanpackages . /dev/null > Packages
+          cat Packages
 
           # 生成 Release 文件
           cat <<EOF > Release
@@ -33,6 +34,8 @@ Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: MoxMox iOS Tweak Repo
 EOF
+          
+          cat Release  # 输出 Release 文件内容，确认生成内容
 
       - name: Commit and Push
         run: |
