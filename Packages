@@ -1,0 +1,39 @@
+Package: mox.sdk.rootfull
+Name: MOX SDK FREE ROOTFULL
+Version: 3.7
+Architecture: iphoneos-arm
+Description: MOX SDK Free for Rootfull devices
+Filename: debs/MOX SDK FREE ROOTFULL.deb
+Size: 1613912
+Maintainer: MoxMox
+Section: Tweaks
+
+Package: mox.sdk.rootless
+Name: MOX SDK FREE ROOTLESS
+Version: 3.7
+Architecture: iphoneos-arm64
+Description: MOX SDK Free for Rootless devices
+Filename: debs/MOX SDK FREE ROOTLESS.deb
+Size: 1613294
+Maintainer: MoxMox
+Section: Tweaks
+
+Package: mox.ue4.rootfull
+Name: MOX UE4 FREE ROOTFULL
+Version: 3.7
+Architecture: iphoneos-arm
+Description: MOX UE4 Free for Rootfull devices
+Filename: debs/MOX UE4 FREE ROOTFULL.deb
+Size: 188672
+Maintainer: MoxMox
+Section: Tweaks
+
+Package: mox.ue4.rootless
+Name: MOX UE4 FREE ROOTLESS
+Version: 3.7
+Architecture: iphoneos-arm64
+Description: MOX UE4 Free for Rootless devices
+Filename: debs/MOX UE4 FREE ROOTLESS.deb
+Size: 188548
+Maintainer: MoxMox
+Section: Tweaks
