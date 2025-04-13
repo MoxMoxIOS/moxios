@@ -1,0 +1,8 @@
+Origin: MOX IOS
+Label: MOX IOS
+Suite: stable
+Version: 1.0
+Codename: moxios
+Architectures: iphoneos-arm iphoneos-arm64 iphones-arm64e
+Components: main
+Description: MOX IOS
